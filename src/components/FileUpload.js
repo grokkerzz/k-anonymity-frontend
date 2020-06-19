@@ -11,7 +11,7 @@ class FileUpload extends Component {
     onFileUpload = () => {
       const formData = new FormData();
       formData.append(
-        "myFile",
+        "input",
         this.state.selectedFile,
         this.state.selectedFile.name
       );
@@ -20,6 +20,8 @@ class FileUpload extends Component {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
+      }).then(res => {
+        console.log(res.statusText)
       });
     };
     fileData = () => {
