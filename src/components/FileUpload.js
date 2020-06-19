@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import InputInfo from './InputInfo';
 
 class FileUpload extends Component {
     state = {
@@ -9,6 +10,7 @@ class FileUpload extends Component {
       this.setState({ selectedFile: event.target.files[0]});
     };
     onFileUpload = () => {
+      if (this.state.selectedFile) {
       const formData = new FormData();
       formData.append(
         "input",
@@ -23,6 +25,8 @@ class FileUpload extends Component {
       }).then(res => {
         console.log(res.statusText)
       });
+      window.location.reload(false);
+    }
     };
     fileData = () => {
         if (this.state.selectedFile) { 

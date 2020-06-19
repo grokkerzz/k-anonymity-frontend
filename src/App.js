@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar'
 import QiSelect from './components/QiSelect'
 import AlgoSelect from './components/AlgoSelect'
+import InputInfo from './components/InputInfo'
 
 class App extends Component {
   render() {
@@ -35,6 +36,9 @@ class App extends Component {
                   </ul>
                 </div>
               </nav>
+              <InputInfo/>
+
+
             </div>
             <footer className="bg-white sticky-footer">
               <div className="container my-auto">
