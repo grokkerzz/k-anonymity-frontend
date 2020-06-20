@@ -14,7 +14,7 @@ class AlgoSelect extends Component {
         const {algoArray} = this.state;
         return (
             <div class='d-sm-flex'>
-            <label class="text-left" style={{marginRight: '10px', marginTop: '4px', marginLeft: '50px'}}>Chọn giải thuật:</label>
+            <label class="text-left" style={{marginRight: '10px', marginTop: '4px', marginLeft: '30px'}}>Chọn giải thuật:</label>
             <Multiselect
             options={algoArray}
             singleSelect

@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import { Multiselect } from 'multiselect-react-dropdown';
 
-class QiSelect extends Component {
+class SenSelect extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            info: "",
             fieldArray: [
             ],
             selectedValues: [
@@ -28,24 +29,14 @@ class QiSelect extends Component {
     componentDidMount() {
         this.getField();
     }
-    onSelect(selectedList, selectedItem) {
-        //TODO: Hàm đẩy dữ liệu được chọn qua backend
-    }
-     
-    onRemove(selectedList, removedItem) {
-        //TODO: Xoá dữ liệu đã chọn
-    }
     render() {
         const {fieldArray, selectedValues} = this.state;
         return (
             <div class='d-sm-flex'>
-                <label class="text-left" style={{marginRight: '11px'}}>Chọn các cột cần ẩn danh:</label>
+                <label class="text-left" style={{marginRight: '11px', marginLeft: '30px'}}>Chọn các giá trị nhạy cảm:</label>
                 <Multiselect
-                id='QiSelect'
                 options={fieldArray}
                 selectedValues={selectedValues}
-                onSelect={this.onSelect}
-                onRemove={this.onRemove}
                 displayValue="field"
                 closeIcon="cancel"
                 avoidHighlightFirstOption="true"
@@ -55,4 +46,4 @@ class QiSelect extends Component {
     }
 }
 
-export default QiSelect;
+export default SenSelect;

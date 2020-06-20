@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import InputInfo from './InputInfo';
 
 class FileUpload extends Component {
     state = {
@@ -53,11 +52,10 @@ class FileUpload extends Component {
                 onChange={this.onFileChange}
                 style={{
                     fontSize: '10px',
-                    width: '138px'
+                    width: '138px',
                 }}
                 accept=".csv"
                 /> 
-
                 <button
                 onClick={this.onFileUpload}
                 style={{

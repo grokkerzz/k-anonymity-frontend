@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FileUpload from './FileUpload'
+import FileUpload from './FileUpload';
+import ProcessButton from './ProcessButton';
 
 class Navbar extends Component {
     constructor(props) {
@@ -25,7 +26,7 @@ class Navbar extends Component {
               <p className="text-left" style={{color: 'rgb(255,255,255)', paddingTop: '5px', paddingRight: '0px', paddingLeft: '34px', marginRight: '30px', marginLeft: '0px'}}>2. Chọn các cột cần ẩn danh (Quasi-identifiers)&nbsp;</p>
               <p className="text-left" style={{color: 'rgb(255,255,255)', paddingTop: '5px', paddingLeft: '33px', marginRight: '30px'}}>3. Chọn giải thuật ẩn danh</p>
               <FileUpload/>
-              
+              <ProcessButton/>
             </div>
           </nav>
         );

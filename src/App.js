@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navbar from './components/Navbar'
-import QiSelect from './components/QiSelect'
-import AlgoSelect from './components/AlgoSelect'
-import InputInfo from './components/InputInfo'
+import Navbar from './components/Navbar';
+import QiSelect from './components/QiSelect';
+import AlgoSelect from './components/AlgoSelect';
+import InputInfo from './components/InputInfo';
+import SenSelect from './components/SenSelect';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
               <nav className="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
                 <div className="container-fluid">
                   <QiSelect/>
+                  <SenSelect/>
                   <AlgoSelect/>
                   <ul className="nav navbar-nav flex-nowrap ml-auto">
                     <li className="nav-item dropdown d-sm-none no-arrow">

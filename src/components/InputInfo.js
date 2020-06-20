@@ -12,8 +12,8 @@ function InputInfo() {
         });
     }, []);
     return(
-            <div class="container" style={{height: '310px'}}>
-                <h5 class="text-left">Dữ liệu đầu vào:</h5>
+            <div class="container" style={{height: '310px', float: 'left'}}>
+            <h5 class="text-left">Dữ liệu đầu vào:</h5>
             <p class="text-left">Số dòng: {numRows}</p>
             <p class="text-left">Số cột: {numCols}</p>
             <p class="text-left">Các cột: {listCols}</p>
