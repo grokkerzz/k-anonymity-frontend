@@ -1,4 +1,4 @@
-import React, {Component, useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 
 function InputInfo() {
     const [numRows, setNumRows] = useState(0);
@@ -9,6 +9,7 @@ function InputInfo() {
             setNumRows(data.num_rows);
             setNumCols(data.num_cols);
             setListCols(data.list_columns.join(' | '));
+            console.log(data);
         });
     }, []);
     function openTable() {
@@ -31,7 +32,7 @@ function InputInfo() {
                 }}
                 className="btn visible"
                 >
-                  Xem bảng
+                  Xem bảng input
             </button>
             </div>
     );

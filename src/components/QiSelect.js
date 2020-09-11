@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Multiselect } from 'multiselect-react-dropdown';
+import axios from 'axios';
 
 class QiSelect extends Component {
     constructor(props) {
@@ -29,18 +30,18 @@ class QiSelect extends Component {
         this.getField();
     }
     onSelect(selectedList, selectedItem) {
-        //TODO: Hàm đẩy dữ liệu được chọn qua backend
+        axios.post("/getQI", selectedList)
     }
      
     onRemove(selectedList, removedItem) {
-        //TODO: Xoá dữ liệu đã chọn
+        axios.post("/getQI", selectedList)
     }
     render() {
         const {fieldArray, selectedValues} = this.state;
         return (
-            <div class='d-sm-flex'>
-                <label class="text-left" style={{marginRight: '11px'}}>Chọn các cột cần ẩn danh:</label>
-                <Multiselect
+            <div style={{display:'inline-block', marginRight:'15px'}}>
+                <label style={{marginRight: '11px', marginLeft: '10px'}}>Chọn các cột cần ẩn danh (QI)</label>
+                <Multiselect style={{position: 'relative'}}
                 id='QiSelect'
                 options={fieldArray}
                 selectedValues={selectedValues}
@@ -49,6 +50,7 @@ class QiSelect extends Component {
                 displayValue="field"
                 closeIcon="cancel"
                 avoidHighlightFirstOption="true"
+                closeOnSelect="false"
                 />
             </div>
         )

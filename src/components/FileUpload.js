@@ -51,7 +51,7 @@ class FileUpload extends Component {
                 type="file" 
                 onChange={this.onFileChange}
                 style={{
-                    fontSize: '10px',
+                    fontSize: '16px',
                     width: '138px',
                 }}
                 accept=".csv"
